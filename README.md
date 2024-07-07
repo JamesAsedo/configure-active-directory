@@ -117,18 +117,18 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <h3 align="center">Join Client-1 to your domain</h3>
 <p>
   <h4>From the Azure Portal, set Client-1’s DNS settings to the DC’s Private IP address</h4>
-  
-  <img src="" height="50%" width="50%" alt="client dns settings"/>
+  <img src="https://i.imgur.com/xk505ny.png" height="50%" width="50%" alt="client dns settings"/>
   
   <h4>From the Azure Portal, restart Client-1</h4><br/>
+  <img src="https://i.imgur.com/itslTXQ.png" height="50%" width="50%" alt="Client-1 restart"/>
   
   <h4>Login to Client-1 (Remote Desktop) as the original local admin (labuser) and join it to the domain (computer will restart)</h4>
-  <img src="" height="50%" width="50%" alt="domain joining"/>
+  <img src="https://i.imgur.com/gNgez5i.png" height="50%" width="50%" alt="domain joining"/>
   
   <h4>Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers (ADUC) inside the “Computers” container on the root of the domain</h4><br/>
   
   <h4>Create a new OU named “_CLIENTS” and drag Client-1 into there</h4>
-  <img src="" height="50%" width="50%" alt="active directory client verification"/>
+  <img src="https://i.imgur.com/mzadSgh.png" height="50%" width="50%" alt="active directory client verification"/>
 </p>
 <br />
 
