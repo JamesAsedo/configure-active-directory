@@ -134,38 +134,33 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h3 align="center">Setup Remote Desktop for non-administrative users on Client-1</h3>
 <p>
-  <h4>Log into Client-1 as mydomain.com\jane_admin and open system properties</h4><br/>
-  
-  <h4>Click “Remote Desktop”</h4><br/>
-  
-  <h4>Allow “domain users” access to remote desktop</h4><br/>
-  
-  <h4>You can now log into Client-1 as a normal, non-administrative user now</h4><br/>
-  
-  <h4>Normally you’d want to do this with Group Policy that allows you to change MANY systems at once (maybe a future lab)</h4>
-  <img src="" height="50%" width="50%" alt="remote desktop setup"/>
+  <h4>Log into Client-1 as mydomain.com\jane_admin and open system properties</h4>
+  <h4>Click “Remote Desktop” -> click "Select users that can remotely access this PC"</h4>
+  <h4>Add “domain users”</h4>
+  <h4>You can now log into Client-1 as a normal, non-administrative user now</h4>
+  <img src="https://i.imgur.com/lZO3d6e.png" height="50%" width="50%" alt="remote desktop setup"/>
 </p>
 <br />
 
 <h3 align="center">Create a bunch of additional users and attempt to log into client-1 with one of the users</h3>
 <p>
-  <h4>Login to DC-1 as jane_admin</h4><br/>
+  <h4>Login to DC-1 as jane_admin</h4>
   
-  <h4>Open PowerShell_ise as an administrator</h4><br/>
+  <h4>Open PowerShell_ise as an administrator</h4>
   
-  <h4>Create a new File and paste the contents of this script (xxx) into it</h4>
-  <img src="" height="50%" width="50%" alt="create users script"/>
+  <h4>Create a new File and paste the contents of this script (https://github.com/JamesAsedo/configure-active-directory/blob/main/createUsers) into it</h4>
+  <img src="https://i.imgur.com/1JdlxMJ.png" height="50%" width="50%" alt="create users script"/>
   
   <h4>Run the script and observe the accounts being created</h4>
-  <img src="" height="50%" width="50%" alt="observe create users script"/>
+  <img src="https://i.imgur.com/Fw4UQNS.png" height="50%" width="50%" alt="observe create users script"/>
 
   <h4>When finished, open ADUC and observe the accounts in the appropriate OU and attempt to log into Client-1 with one of the accounts (take note of the password in the script)</h4>
-  <img src="" height="50%" width="50%" alt="employee user accounts"/>
-  <img src="" height="50%" width="50%" alt="employee user selection"/>
-  <img src="" height="50%" width="50%" alt="employee user login"/>
+  <img src="https://i.imgur.com/niOjeK5.png" height="50%" width="50%" alt="employee user accounts"/>
+  <img src="https://i.imgur.com/VpISJsn.png" height="50%" width="50%" alt="employee user selection"/>
+  <img src="https://i.imgur.com/Tnln8py.png" height="50%" width="50%" alt="employee user login"/>
 </p>
 <br />
 
 <p>
-  I hope this tutorial helped you learn a little bit about network security protocols and observe traffic between virtual machines. And although I ran this on a my MacBook Air, this can be easily done on a PC without having to download a remote desktop app since Windows provides that with it's software.
+  Thank you for checking out this tutorial. I hope that this tutorial was able to show you how to create a Domain Controller, install Active Directory, and setup Remote Desktop for non-administrative users. Active Directory is like a big, organized list of all the people who use computers at an organization. It helps keep track of everyone's usernames and passwords so they can log in easily. It also stores information about what each person is allowed to do on the computers, like what files they can access or what programs they can use. Basically, it makes sure everything runs smoothly and safely when members of the organization use the computers! Thank you once again for stopping by and have a wonderful day!
 </p>
